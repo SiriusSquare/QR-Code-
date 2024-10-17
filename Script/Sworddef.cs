@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Sworddef : MonoBehaviour
 {
-    public GameObject projectilePrefab;  // 발사체 프리팹
-    public string playerObjectTag = "Player"; // 플레이어 대상으로 삼을 태그 지정
-    private PlayerStatus playerStatus;   // PlayerStatus 스크립트 참조
-    public float attackRateDef = 1f;   // 기본 발사 간격
-    public float attackRate;             // 계산된 발사 간격
-    public float projectileSpeed = 1.0f;  // 발사체 속도
-    private bool canShoot = true;        // 발사 가능 여부
-    private int combo; // 콤보
-    public float durationDef = 0.2f; // 애니메이션 지속 시간
+    public GameObject projectilePrefab;
+    public string playerObjectTag = "Player";
+    private PlayerStatus playerStatus;
+    public float attackRateDef = 1f;
+    public float attackRate;
+    public float projectileSpeed = 1.0f;
+    private bool canShoot = true;
+    private int combo;
+    public float durationDef = 0.2f;
     public float duration;
-    public float durationreal; // 애니메이션 지속 시간
-    private Animator animator; // Animator 컴포넌트 참조
+    public float durationreal;
+    private Animator animator;
     private float projectileRotationX;
 
-    private Transform parentTransform; // 부모 Transform을 저장할 변수
+    private Transform parentTransform;
 
     private void Start()
     {
@@ -38,13 +38,13 @@ public class Sworddef : MonoBehaviour
             }
         }
 
-        // Animator 컴포넌트 참조 설정
+        
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // 부모가 Player 태그를 가진 오브젝트일 때만 발사
+        
         if (IsParentPlayer() && Input.GetMouseButtonDown(0) && canShoot)
         {
             if (playerStatus != null)
@@ -65,7 +65,7 @@ public class Sworddef : MonoBehaviour
         {
             durationreal = durationDef * 10 * playerStatus.FinalAttackSpeed;
 
-            // 콤보에 따라 애니메이션 트리거 설정
+            
             if (combo == 0)
             {
                 animator.speed = durationreal;
@@ -80,7 +80,7 @@ public class Sworddef : MonoBehaviour
             }
         }
 
-        // 발사체를 콤보에 따라 회전하여 생성
+        
         if (combo == 0)
         {
             projectileRotationX = 180.0f;
@@ -106,7 +106,7 @@ public class Sworddef : MonoBehaviour
         canShoot = true;
     }
 
-    // 부모 오브젝트가 Player 태그를 가지고 있는지 확인하는 함수
+    
     private bool IsParentPlayer()
     {
         Transform currentTransform = transform.parent;

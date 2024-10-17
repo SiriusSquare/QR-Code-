@@ -58,7 +58,7 @@ public class ChestWappon : MonoBehaviour
                 Instantiate(prefabsCommon5[Random.Range(0, prefabsCommon5.Length)], transform.position, Quaternion.identity);
             }
 
-            // 현재 오브젝트 삭제
+            
             Destroy(gameObject);
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BiomeChangeSystem : MonoBehaviour
 {
-    public string folderPath = "Biome"; // Resources 폴더 내 경로
+    public string folderPath = "Biome";
     private GameObject[] Biome;
     private GameObject[] Biometier1;
     private GameObject[] Biometier2;
@@ -17,7 +17,7 @@ public class BiomeChangeSystem : MonoBehaviour
     {
         level = 1;
 
-        // 지정된 경로에서 모든 프리팹 로드
+        
         Biome = Resources.LoadAll<GameObject>(folderPath);
         Biometier1 = Resources.LoadAll<GameObject>(folderPath + "/Tier 1"); 
         Biometier2 = Resources.LoadAll<GameObject>(folderPath + "/Tier 2");
@@ -26,7 +26,7 @@ public class BiomeChangeSystem : MonoBehaviour
         Biometier5 = Resources.LoadAll<GameObject>(folderPath + "/Tier 5");
     }
 
-    // BiomeChange 메서드를 코루틴으로 변경
+    
     public IEnumerator BiomeChange()
     {
         if (level <= 1f)
@@ -52,7 +52,7 @@ public class BiomeChangeSystem : MonoBehaviour
 
         level += 1;
 
-        // 코루틴이 종료되었음을 알리기 위해 null 반환
+        
         yield return null;
     }
 }

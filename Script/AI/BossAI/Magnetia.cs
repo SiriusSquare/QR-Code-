@@ -51,7 +51,7 @@ public class Magnetia : MonoBehaviour
 
             if (distanceToPlayer <= shootingRange && Time.time >= lastShootTime + cooldownTime)
             {
-                int attackRandom = UnityEngine.Random.Range(1, 6); // 1 to 4
+                int attackRandom = UnityEngine.Random.Range(1, 6);
                 switch (attackRandom)
                 {
                     case 1:
@@ -183,7 +183,7 @@ public class Magnetia : MonoBehaviour
                     Instantiate(Effect2, shootPoint.position, Quaternion.identity);
                 }
 
-                yield return new WaitForSeconds(0.15f); // 1초 대기
+                yield return new WaitForSeconds(0.15f);
             }
             yield return new WaitForSeconds(2f);
         }
@@ -194,7 +194,7 @@ public class Magnetia : MonoBehaviour
     {
         if (projectilePrefab3 != null && shootPoint != null)
         {
-            // 첫 번째 투사체 발사
+            
             yield return new WaitForSeconds(0.3f);
             Vector3 directionToPlayer = (player.position - shootPoint.position).normalized;
             GameObject projectile = Instantiate(projectilePrefab3, shootPoint.position, Quaternion.identity);
@@ -295,7 +295,7 @@ public class Magnetia : MonoBehaviour
 
                 transform.position = new Vector3(player.position.x + TeleportPosX, player.position.y + TeleportPosY, transform.position.z);
 
-                // 이팩트 생성
+                
                 if (Effect3 != null)
                 {
                     Instantiate(Effect3, shootPoint.position, Quaternion.identity);

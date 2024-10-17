@@ -37,6 +37,7 @@ public class WaveSystem : MonoBehaviour
     public Transform spawntrans;
     public Vector2 spawnAreaMin;
     public Vector2 spawnAreaMax;
+
     void Start()
     {
         StartCoroutine(WaveStart());
@@ -44,7 +45,7 @@ public class WaveSystem : MonoBehaviour
 
     private IEnumerator WaveStart()
     {
-        
+
         if (Zombie1 != null)
         {
             for (int i = 0; i < SummonZombie1; i++)
@@ -92,7 +93,7 @@ public class WaveSystem : MonoBehaviour
             }
         }
 
-        
+       
         if (Zombie4 != null)
         {
             for (int i = 0; i < SummonZombie4; i++)
@@ -195,5 +196,7 @@ public class WaveSystem : MonoBehaviour
             }
         }
         Destroy(gameObject);
+
+
     }
 }

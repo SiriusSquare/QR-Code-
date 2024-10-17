@@ -28,10 +28,6 @@ public class FollowAISwordman : MonoBehaviour
         {
             player = playerObject.transform;
         }
-        else
-        {
-            Debug.LogWarning("Player not found. Ensure that there is a GameObject with the 'Player' tag in the scene.");
-        }
 
        
         spriteRenderer = GetComponent<SpriteRenderer>();

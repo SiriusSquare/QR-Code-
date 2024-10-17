@@ -66,7 +66,7 @@ public class SoulMasterAI : MonoBehaviour
             Quaternion spreadRotation = Quaternion.Euler(0, 0, spreadRandomAngle);
             Vector3 spreadDirection = spreadRotation * directionToPlayer;
 
-            // 탄막 생성
+            
             GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
 
  

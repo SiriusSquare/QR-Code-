@@ -20,7 +20,7 @@ public class RushAI : MonoBehaviour
             animator.speed = Animationspeed;
         }
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // 태그가 "Player"인 게임 오브젝트를 찾아서 player 변수에 할당
+        
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {

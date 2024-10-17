@@ -44,7 +44,7 @@ public class PlayerAbility : MonoBehaviour
     {
         canShoot = false;
 
-        // 발사체 생성 및 발사
+        
         GameObject projectile = Instantiate(projectilePrefab, shotPart.transform.position, Quaternion.identity);
         projectile.transform.SetParent(transform);
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

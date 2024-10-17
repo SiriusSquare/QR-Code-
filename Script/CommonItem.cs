@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CommonItem : MonoBehaviour
 {
-    public string Tag = "Player";  // �浹 ��� �±�
+    public string Tag = "Player";
     public float HealthHeal;
     public float currentHealth;
 

@@ -23,7 +23,7 @@ public class PlayerItemPickup : MonoBehaviour
             SetWeaponTransparency(equippedWeapon, transparentAlpha); 
         }
 
-        // 새로운 무기 생성 및 장착
+        
         GameObject newWeapon = Instantiate(weaponPrefab, transform);
         EquipWeapon(newWeapon.transform);
     }
